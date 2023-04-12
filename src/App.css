@@ -1,0 +1,204 @@
+#root {
+  font-family: 'Raleway', sans-serif;
+  flex: 1;
+  height: 100%;
+}
+
+.container-main-signup {
+  --padding: 4rem;
+  display: inline-flex;
+  margin: 0 auto;
+  padding: var(--padding);
+  text-align: center;
+  background-color: black;
+  width: calc(100% - 2 * var(--padding));
+  height: calc(100% - 2 * var(--padding));
+  color: antiquewhite;
+}
+
+.container-1-div {
+  padding-right: 5rem;
+  font-size: xx-large;
+  align-self: center;
+  margin-block-end: 1rem;
+  font-weight: 800;
+}
+
+.are-you-ready .big {
+  font-size: 2.5rem;
+}
+
+.signup {
+  display: inline-block;
+  margin-inline-end: auto;
+}
+
+#form-signup,
+#form-login,
+#form-forgot {
+  border: 3px solid white;
+  padding: 10px;
+}
+
+.signup-label {
+  font-size: 1.8rem;
+}
+
+.already-div {
+  /* already have an account */
+  display: inline-block;
+  font-size: 1rem;
+  border-bottom: 3px solid white;
+  margin-bottom: 5px;
+}
+
+.container-signup,
+.container-login,
+.container-forgot {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  font-size: 1.5rem;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+}
+
+#grid-item {
+  padding: 10px;
+}
+
+.main-title-div {
+  font-size: 2.8rem;
+  gap: 1rem;
+}
+
+.sub-title-div {
+  font-size: 1.8rem;
+  color: grey;
+}
+
+.want-to-log-in {
+  text-decoration-line: underline;
+}
+
+/* label[htmlFor="main-title"] {
+  font-size: x-large;
+} */
+
+.login,
+.forgot-password {
+  display: flex;
+  flex-direction: column;
+  --padding: 15rem;
+  margin: 0 auto;
+  padding: var(--padding);
+  text-align: center;
+  background-color: black;
+  width: calc(100% - 2 * var(--padding));
+  height: calc(100% - 2 * var(--padding));
+  color: antiquewhite;
+}
+
+.login-title-div {
+  padding: 1rem;
+}
+
+#login-title {
+  font-size: 2.2rem;
+}
+
+#forgot-password-text {
+  font-size: medium;
+  padding-left: 160px;
+}
+
+.forgot-title-div {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+
+.container-forgot{
+  margin-bottom: 1rem ;
+}
+
+.main-title-start-div {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(5, 80, 110);
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  padding: 40px;
+}
+
+.main-intro{
+  font-size: 1.5rem;
+  padding: 1.8rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#request-button{
+  font-size: 1rem;
+  background-color: rgb(213 118 0 / 78%);
+  font-weight: 500;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.start-quiz,
+.start-quiz1{
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: rgb(5, 80, 110);
+  background-color: rgb(123 255 255 / 78%);
+  gap: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.start-quiz1{
+  background-color: rgba(229, 123, 255, 0.78);
+}
+
+.quiz-name-start,
+.quiz-sub-name {
+  font-size: 1.5rem;
+}
+
+.start-quiz-button1,
+.start-quiz-button2{
+  font-size: 1.4rem;
+}
+
+#taylor-swift{
+  color: maroon;
+}
+
+.request-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  margin: 5rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  padding: 6rem;
+  font-size: 2rem;
+}

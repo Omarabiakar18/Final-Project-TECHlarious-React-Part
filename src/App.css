@@ -110,6 +110,16 @@ input {
   font-size: 2.2rem;
 }
 
+.login-ending-div{
+  display: flex;
+  flex-direction: column;
+}
+
+#forgot-password-link-from-login{
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
 #forgot-password-text {
   font-size: medium;
   padding-left: 160px;
@@ -201,4 +211,36 @@ input {
   margin-right: 10rem;
   padding: 6rem;
   font-size: 2rem;
+}
+
+.question-UI{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.promocode-taylor-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  margin: 5rem;
+  font-size: 1.5rem;
+}
+
+#answer-1-button,
+#answer-2-button,
+#answer-3-button{
+  margin: 0.8rem;
+  width: 50rem;
+  background-color: cornflowerblue;
+}
+
+.item-price-50percent,
+.item-price-15percent{
+  margin-left: 8rem;
+  margin-right: 1rem;
 }

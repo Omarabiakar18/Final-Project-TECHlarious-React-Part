@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./App.css";
 
 function LogIn() {
@@ -15,13 +16,18 @@ function LogIn() {
 
           <input type="password" required placeholder="Enter your password." />
           <div id="item-grid"></div>
-          <Link to="/forgotpassword">Forgot your password?</Link>
-          <button>LogIn</button>
+          <Link id="forgot-password-link-from-login" to="/forgotpassword">
+            Forgot your password?
+          </Link>
         </div>
-
-        <label htmlFor="want-to-log-in">Don't have an account? </label>
-
-        <Link to="/signup">Signup</Link>
+        <div className="login-ending-div">
+          <NavLink to="/start">
+            <button>Login</button>
+          </NavLink>
+          <label htmlFor="want-to-log-in">
+            Don't have an account? <Link to="/signup">Signup</Link>
+          </label>
+        </div>
       </form>
     </div>
   );

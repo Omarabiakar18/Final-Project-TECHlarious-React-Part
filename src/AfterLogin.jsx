@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import "./App.css";
+
 function Start() {
   return (
     <div className="main-container-div">
@@ -16,7 +19,9 @@ function Start() {
           be added later)
         </label>
         <label> Want to request a certain celebrity?</label>
-        <button id="request-button">Request Here</button>
+        <NavLink to="/request">
+          <button id="request-button">Request Here</button>
+        </NavLink>{" "}
       </div>
 
       <div className="start-quiz">
@@ -28,6 +33,7 @@ function Start() {
         <label className="quiz-sub-name">Are you ...Ready For It?</label>
         <button className="start-quiz-button1">Start</button>
       </div>
+
       <div className="start-quiz1">
         <label className="question-start">
           Other Quizzes will be displayed here

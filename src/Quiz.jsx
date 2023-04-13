@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./App.css";
 
-function Start() {
+function Quiz() {
   return (
     <div className="main-container-div">
       <div className="main-title-start-div">
@@ -19,4 +19,4 @@ function Start() {
     </div>
   );
 }
-export default Start;
+export default Quiz;

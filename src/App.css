@@ -231,9 +231,7 @@ input {
   font-size: 1.5rem;
 }
 
-#answer-1-button,
-#answer-2-button,
-#answer-3-button{
+.answer-button{
   margin: 0.8rem;
   width: 50rem;
   background-color: cornflowerblue;
@@ -243,4 +241,15 @@ input {
 .item-price-15percent{
   margin-left: 8rem;
   margin-right: 1rem;
+}
+
+.quiz-next-button-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#quiz-next-button{
+  background-color: cornflowerblue;
 }

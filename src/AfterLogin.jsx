@@ -31,7 +31,9 @@ function Start() {
         <span>ALL TOO WELL??</span>
         <label className="quiz-name-start">Swiftie Brain Buster</label>
         <label className="quiz-sub-name">Are you ...Ready For It?</label>
-        <button className="start-quiz-button1">Start</button>
+        <NavLink to="/quiz">
+          <button className="start-quiz-button1">Start</button>
+        </NavLink>
       </div>
 
       <div className="start-quiz1">

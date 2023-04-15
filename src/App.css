@@ -89,7 +89,8 @@ input {
 } */
 
 .login,
-.forgot-password {
+.forgot-password,
+.reset-password {
   display: flex;
   flex-direction: column;
   --padding: 15rem;
@@ -115,17 +116,20 @@ input {
   flex-direction: column;
 }
 
-#forgot-password-link-from-login{
+#forgot-password-link-from-login,
+#reset-password-link-from-login{
   font-size: 1rem;
   margin-left: 1rem;
 }
 
-#forgot-password-text {
+#forgot-password-text,
+#reset-password-text {
   font-size: medium;
   padding-left: 160px;
 }
 
-.forgot-title-div {
+.forgot-title-div,
+.reset-title-div {
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
@@ -250,6 +254,23 @@ input {
   font-size: 1.5rem;
 }
 
-#quiz-next-button{
+.quiz-next-button-div button{
   background-color: cornflowerblue;
+}
+
+.congrats-points{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.congrats-points button{
+  font-size: 1.5rem;
+  background-color: cornflowerblue;
+}
+
+#request-button-2{
+  background-color: cornflowerblue;
+  margin-top: 1rem;
 }

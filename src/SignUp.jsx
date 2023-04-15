@@ -1,9 +1,33 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import "./App.css";
 
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { postData } from "./utils";
+
+const SERVER = import.meta.env.VITE_BACKEND;
 
 function SignUp() {
+  const url = `${SERVER}/api/auth/signup`;
+  const formData = useRef({});
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const sendData = {};
+    for (let key in formData.current) {
+      sendData[key] = formData.current[key]();
+    }
+    const response = await postData(url, sendData);
+    const json = await response.json();
+    if (response.status >= 400) {
+      alert(`Error Occured: ${json.message}`);
+      localStorage.clear();
+    } else {
+      localStorage.setItem("token", json.token);
+      localStorage.setItem("fullName", json.data.user.fullName);
+      location.href = "/start";
+    }
+  }
+
   return (
     <div className="container-main-signup">
       <div className="container-1-div">
@@ -19,14 +43,24 @@ function SignUp() {
           <label htmlFor="sub-title">Test your Knowledge</label>
         </div>
 
-        <form id="form-signup">
+        <form id="form-signup" onSubmit={handleSubmit}>
           <label className="signup-label">SignUp to continue: </label>
           <div className="container-signup">
             <div id="grid-item" className="full-name-div1">
               <label htmlFor="fullName">Full Name:</label>
             </div>
             <div id="grid-item" className="full-name-div2">
-              <input type="text" required placeholder="Enter your full name." />
+              <input
+                type="text"
+                required
+                placeholder="Enter your full name."
+                ref={(elt) =>
+                  (formData.current = {
+                    fullName: () => elt.value,
+                    ...formData.current,
+                  })
+                }
+              />
             </div>
 
             <div id="grid-item" className="email-div1">
@@ -37,6 +71,12 @@ function SignUp() {
                 type="email"
                 required
                 placeholder="Enter your email address."
+                ref={(elt) =>
+                  (formData.current = {
+                    email: () => elt.value,
+                    ...formData.current,
+                  })
+                }
               />
             </div>
 
@@ -48,6 +88,12 @@ function SignUp() {
                 type="password"
                 required
                 placeholder="Enter your password."
+                ref={(elt) =>
+                  (formData.current = {
+                    password: () => elt.value,
+                    ...formData.current,
+                  })
+                }
               />
             </div>
 
@@ -60,6 +106,12 @@ function SignUp() {
                 type="password"
                 required
                 placeholder="Confirm your password."
+                ref={(elt) =>
+                  (formData.current = {
+                    passwordConfirm: () => elt.value,
+                    ...formData.current,
+                  })
+                }
               />
             </div>
           </div>

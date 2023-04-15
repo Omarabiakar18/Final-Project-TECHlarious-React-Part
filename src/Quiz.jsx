@@ -9,6 +9,7 @@ async function getData() {
   return data;
 }
 
+//To mix the questions randomly
 function randomArray(length) {
   const array = Array(length);
   for (let i = 0; i < length; i++) array[i] = i;
@@ -29,6 +30,7 @@ function QuizItem({ qno, questionData, toggleReset, afterClick }) {
     buttons.current.forEach((btn) => {
       btn.style.backgroundColor = "cornflowerblue";
       btn.style.border = "none";
+      btn.style.color = "black";
     });
   }, [toggleReset]);
 
@@ -36,7 +38,8 @@ function QuizItem({ qno, questionData, toggleReset, afterClick }) {
     if (!chooseAnswer.current) {
       chooseAnswer.current = true;
       buttons.current.forEach((btn, i) => {
-        btn.style.backgroundColor = i === correct ? "green" : "red";
+        btn.style.backgroundColor = i === correct ? "#00c100" : "red";
+        btn.style.color = i === correct ? "oldlace" : "oldlace";
       });
       buttons.current[selectedIndex].style.border = "5px solid black";
       const points = selectedIndex === correct ? 5 : 0;
@@ -92,6 +95,9 @@ function Quiz() {
     <div className="main-container-div">
       <div className="main-title-start-div">
         <label className="main-title-logo">Celebrity Brain Buster</label>
+        <label className="main-title-logo" style={{ marginLeft: "auto" }}>
+          Points: {points}
+        </label>
         <div className="logged-in-user"> </div>
       </div>
       {QNA.length === 0 || randomIndicies.length === 0 ? (
@@ -107,15 +113,18 @@ function Quiz() {
           }}
         />
       ) : (
-        <h1>
-          Congratulations! You got {points}/{randomIndicies.length * 5};
-        </h1>
+        <div className="congrats-points">
+          <h1>
+            Congratulations! You got {points}/{randomIndicies.length * 5};
+          </h1>
+          <NavLink to="/start">
+            <button>Go Back</button>
+          </NavLink>
+        </div>
       )}
       {nextBtn && (
         <div className="quiz-next-button-div">
-          <button id="quiz-next-button" onClick={moveNextQuestion}>
-            Next
-          </button>
+          <button onClick={moveNextQuestion}>Next</button>
         </div>
       )}
     </div>

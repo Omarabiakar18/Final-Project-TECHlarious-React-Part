@@ -11,6 +11,10 @@ function Request() {
       <div className="request-div">
         <label>Enter your request here: </label>
         <input type="text" />
+        <button id="request-button-2">Request</button>
+        <NavLink to="/start">
+          <button id="request-button-2">Go Back</button>
+        </NavLink>
       </div>
     </div>
   );
